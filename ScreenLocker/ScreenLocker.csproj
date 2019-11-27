@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <PublishTrimmed>true</PublishTrimmed>
+    <PublishReadyToRun>true</PublishReadyToRun>
+    <PublishReadyToRunShowWarnings>true</PublishReadyToRunShowWarnings>
+    <PublishSingleFile>true</PublishSingleFile>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <UseWPF>true</UseWPF>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>ScreenLocker.pfx</AssemblyOriginatorKeyFile>
+    <Description>Helping you protecting your data.</Description>
+    <Version>1.0.1</Version>
+    <Company>Securitech</Company>
+    <Authors>Securitech</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MahApps.Metro" Version="2.0.0-alpha0605" />
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="3.0.0-alpha0260" />
+  </ItemGroup>
+
+</Project>

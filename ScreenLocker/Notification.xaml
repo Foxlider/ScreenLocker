@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="ScreenLocker.Notification"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:icons="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d" Height="125" Width="400">
+    <Grid Background="#5C5C5C">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Height="auto" Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <icons:PackIconModern Grid.Column="1" Kind="Lock" Height="auto" Width="auto" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Column="1" Margin="5,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Name="lblTitle" FontSize="15" FontWeight="DemiBold" Foreground="#EEEEEE" Padding="1" Margin="0"/>
+            <TextBlock Grid.Row="1" Name="lblContent" FontSize="13" FontWeight="Normal" Foreground="#AEAEAE" TextWrapping="WrapWithOverflow" Text="" Padding="1" Margin="0" />
+            <Label Grid.Row="2" Name="lblTime" FontWeight="DemiBold" FontSize="10" HorizontalContentAlignment="Right" Foreground="#8e8e8e" Margin="15,0" Padding="0"/>
+        </Grid>
+    </Grid>
+</UserControl>
